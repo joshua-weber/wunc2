@@ -1,0 +1,17 @@
+/* Viro Media */
+Link => https://viromedia.com/
+
+Viro has been used for the AR learning side of our application. 
+
+ // Intro tutorial for viro media AR 
+     Link => http://docs.viromedia.com/docs/tutorial-ar
+     
+     Notes: 
+            - According to Viro, you will need an iPhone 6s gen. or newer running iOS 11 or higher.
+            
+            - The ViroARPlane/ViroARPlaneSelector will not work if the your current software is not 
+               iOS 11.
+               
+            
+
+
