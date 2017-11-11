@@ -42,8 +42,11 @@ var HelloWorldSceneAR = React.createClass({
           castsShadow={true} />
 
           <Viro3DObject
-            source={require('./res/Pain/Pain.vrx')}
-            resources={[require('./res/Pain/cgaxis_models_08_07_01.jpg')]}
+            source={require('./res/chicken/chicken.vrx')}
+            resources={[require('./res/chicken/chicken_diffuse.jpg'),
+                        require('./res/chicken/chicken_normals.jpg'),
+                        require('./res/chicken/chicken_specular.jpg'),
+                        require('./res/chicken/chicken_gloss.jpg')]}
             position={[0, .5, -.1]}
             scale={[.1, .1, .1]}
             type="VRX" />
