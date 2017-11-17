@@ -1,16 +1,34 @@
-import React, { Component } from "react";
-import { View } from "react-native";
-import { Header } from "./src/components/common";
-import AR from "./src/components/AR";
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import firebase from 'firebase';
+// import ReduxThunk from 'redux-thunk';
+// import reducers from './reducers';
+import Router from './src/Router';
 
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <Header headerText = {"Magic Menu"} />
-        <AR />
-      </View>
-    );
-  }
+class App extends Component {
+
+	componentWillMount() {
+		var config = {
+		    apiKey: '',
+		    authDomain: '',
+		    databaseURL: '',
+		    projectId: '',
+		    storageBucket: '',
+		    messagingSenderId: ''
+		};
+		firebase.initializeApp(config);
+	}
+
+	render() {
+		// const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+
+		return (
+
+				<Router />
+
+		);
+	}
 }
 
+export default App;
