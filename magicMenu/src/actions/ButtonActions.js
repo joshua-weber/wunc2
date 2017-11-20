@@ -1,5 +1,9 @@
 import { Actions } from 'react-native-router-flux';
 
 export const DemoApp = () => {
-	Actions.ar();
+	Actions.restaurants();
 };
+
+export const Menu = (props) => {
+	Actions.restaurantMenu(props);
+}

@@ -1,1 +1,2 @@
-export * from './ButtonActions.js';
+export * from './ButtonActions';
+export * from './RestaurantActions';
