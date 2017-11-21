@@ -5,6 +5,7 @@ import { Menu } from '../actions';
 
 class RestaurantListItem extends Component {
 	onButtonPress() {
+		console.log("onButtonPress", this);
 		Menu(this);
 	}
 

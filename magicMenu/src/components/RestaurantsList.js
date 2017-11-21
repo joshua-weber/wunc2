@@ -20,6 +20,7 @@ class RestaurantsList extends Component {
 	}
 
 	createDataSource({ restaurants }) {
+		console.log("createDataSource", restaurants);
 		const ds = new ListView.DataSource({
 			rowHasChanged: (r1, r2) => r1 !== r2
 		});
@@ -44,6 +45,7 @@ class RestaurantsList extends Component {
 }
 
 const mapStateToProps = state => {
+	console.log("state.restaurants", state.restaurants);
 	const restaurants = _.map(state.restaurants, (val, uid) => {
 		return { ...val, uid }
 	});
