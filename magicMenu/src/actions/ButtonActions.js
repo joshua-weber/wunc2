@@ -7,3 +7,7 @@ export const DemoApp = () => {
 export const Menu = (props) => {
 	Actions.restaurantMenu(props);
 }
+
+export const AR = (props) => {
+	Actions.ar(props);
+}

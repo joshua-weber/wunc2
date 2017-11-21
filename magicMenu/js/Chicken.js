@@ -17,8 +17,8 @@ var HelloWorldSceneAR = React.createClass({
   },
   render: function() {
     return (
-      <ViroARScene onTrackingInitialized={()=>{this.setState({text : "Hello World!"})}}>
-        <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} style={styles.helloWorldTextStyle} />
+      <ViroARScene onTrackingInitialized={()=>{this.setState({text : "Chicken!"})}}>
+        <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} />
       </ViroARScene>
     );
   },
