@@ -62,6 +62,8 @@ export default class ViroSample extends Component {
         InitialARScene = require('../../js/Chicken');
     } else if(this.props.filepath === 'Pain') {
         InitialARScene = require('../../js/Pain');
+    } else if(this.props.filepath === 'Pizza') {
+        InitialARScene = require('../../js/Pizza');
     }
 
 

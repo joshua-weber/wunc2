@@ -7,7 +7,8 @@ import {StyleSheet} from 'react-native';
 import {
   ViroARScene,
   ViroText,
-  Viro3DObject
+  Viro3DObject,
+  ViroAmbientLight
 } from 'react-viro';
 
 var HelloWorldSceneAR = React.createClass({
@@ -19,6 +20,10 @@ var HelloWorldSceneAR = React.createClass({
   render: function() {
     return (
       <ViroARScene onTrackingInitialized={()=>{this.setState({text : "Chicken!"})}}>
+        <ViroAmbientLight
+          color="#ffffff"
+       />
+
         <Viro3DObject
             source={require('./res/chicken/chicken.vrx')}
             resources={[require('./res/chicken/chicken_diffuse.jpg'),

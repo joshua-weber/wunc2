@@ -15,6 +15,7 @@
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.2",
 		"react-native-router-flux": "^4.0.0-beta.24",
+		"react-native-scrolling-button-menu": "0.0.4",
 		"react-redux": "^5.0.6",
 		"react-viro": "^2.0.1",
 		"redux": "^3.7.2",

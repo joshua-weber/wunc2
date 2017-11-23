@@ -7,10 +7,10 @@ import RestaurantMenu from './components/RestaurantMenu';
 
 const RouterComponent = () => {
 	return (
-		<Router>
+		<Router sceneStyle={styles.sceneStyle} navigationBarStyle={styles.navBar} titleStyle={styles.navBarTitle} barButtonTextStyle={styles.barButtonTextStyle} barButtonIconStyle={styles.barButtonIconStyle}>
 			<Stack key="root" hideNavBar>
 				<Scene key="main">
-					<Scene key="welcome" component={Welcome} title="Welcome To" />
+					<Scene key="welcome" component={Welcome} hideNavBar />
 					<Scene key="restaurants" component={RestaurantsList} title="Restaurants" />
 					<Scene key="restaurantMenu" component={RestaurantMenu} title="Menu" />
 					<Scene key="ar" component={AR} title="AR Compnent" />
@@ -20,5 +20,23 @@ const RouterComponent = () => {
 		</Router>
 	)
 };
+
+const styles = {
+	navBar: {
+		backgroundColor:'rgba(255,255,255,1)',
+	},
+	sceneStyle: {
+		backgroundColor:'rgba(255,255,255,1)',
+	},
+	navBarTitle:{
+		color:'black'
+	},
+	barButtonTextStyle:{
+		color:'red'
+	},
+	barButtonIconStyle:{
+		tintColor:'red'
+	},
+}	
 
 export default RouterComponent;

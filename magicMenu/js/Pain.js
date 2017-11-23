@@ -7,7 +7,10 @@ import {StyleSheet} from 'react-native';
 import {
   ViroARScene,
   ViroText,
-  Viro3DObject
+  Viro3DObject,
+  Viro360Image,
+  ViroAmbientLight,
+  ViroARPlaneSelector
 } from 'react-viro';
 
 var HelloWorldSceneAR = React.createClass({
@@ -21,13 +24,21 @@ var HelloWorldSceneAR = React.createClass({
       <ViroARScene onTrackingInitialized={()=>{this.setState({text : "Pain!"})}}>
         <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} />
 
-        <Viro3DObject
-            source={require('./res/Pain/plate.vrx')}
-            position={[0, -0.1, 0]}
-            rotation={[100, 20, -185]}
-            scale={[.1, .1, .1]}
-           
-            type="VRX" />
+        <ViroAmbientLight
+          color="#ffffff"
+       />
+      <ViroARPlaneSelector minHeight={.1} minWidth={.1}>
+          <Viro3DObject
+          source={require('./res/Pain/Pain.vrx')}
+          resources={[require('./res/Pain/cgaxis_models_08_07_01.jpg')]}
+          position={[0, -0.1, 0]}
+          rotation={[100, 20, -185]}
+          scale={[.1, .1, .1]}
+         
+          type="VRX" />
+
+        </ViroARPlaneSelector>
+    
 
       </ViroARScene>
     );
