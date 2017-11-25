@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { ScrollView, Image, View } from 'react-native';
 import { connect } from 'react-redux';
 import RestaurantMenuItem from './RestaurantMenuItem';
-import ScrollingButtonMenu from 'react-native-scrolling-button-menu';
 
 
 let menuCategories = [
