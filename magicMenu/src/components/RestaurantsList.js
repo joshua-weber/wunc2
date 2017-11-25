@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { ListView, Image, SegmentedControlIOS, View } from 'react-native';
+import { ListView, Image, SegmentedControlIOS, View, StatusBar } from 'react-native';
 import ScrollingButtonMenu from 'react-native-scrolling-button-menu';
 import { connect } from 'react-redux';
 import { restaurantListFetch } from '../actions';
@@ -9,25 +9,25 @@ import RestaurantListItem from './RestaurantListItem';
 let menus = [
 	{
 	   text:'Nearby',
-	   textColor:'white',
-	   backgroundColor:'#179fd2',
+	   textColor:'black',
+	   backgroundColor:'rgba(0,0,0,0)',
 	   borderColor:'rgba(0,0,0,0)'
 	},
 	{
 	   text:'Map',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'Favorites',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'Search',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	}
@@ -68,7 +68,13 @@ class RestaurantsList extends Component {
 
 	render() {
 		return (
-			<Image source={require('../img/food1.png')} style={styles.background}>
+			<Image source={require('../assets/img/food1.png')} style={styles.background}>
+			{/* <View style = {styles.lineStyle}></View> */}
+				{/* <StatusBar
+     backgroundColor="red"
+	 barStyle="default"
+	 networkActivityIndicatorVisible='true'
+   /> */}
 				<ListView style={styles.restaurantList}
 					enableEmptySections
 					dataSource = {this.dataSource}
@@ -114,28 +120,45 @@ const styles = {
 		// padding: 100,
 		// width: '100%'
 		borderWidth: 0,
+		marginTop: 60
+		
+	},
+	lineStyle:{
+		borderWidth: 0.5,
+		borderColor:'red',
+		marginTop:90,
+		marginLeft: 10,
+		marginRight: 10
 	},
 	restaurantSelectionForm: {
 		// flex: 1,
-		padding: 15,
-		paddingBottom: 30,
-		// shadowColor: '#000',
-		// shadowOffset: { width: 0, height: 2 },
-		// shadowOpacity: 0.5,
-		// shadowRadius: 2,
-		// borderWidth: 0,
+		padding: 5,
+		// paddingBottom: 30,
+		borderWidth: 0,
+		
 		// marginLeft: 40
 		// alignItems: 'center',
 		// justifyContent: 'center'
 	},
 	menuCategories: {
-		backgroundColor:'rgba(255,255,255,0)',
-		height: 60,
+		backgroundColor:'rgba(255,255,255,1)',
+		height: 40,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.3,
+		shadowRadius: 2,
+		position: 'absolute',
+		bottom: 10,
+		borderRadius: 50,
+		marginLeft: 10,
+		marginRight: 10,
 		// shadowColor: 'rgba(0,0,0,1)',
 		// shadowOffset: { width: 0, height: 2 },
 		// shadowOpacity: 0.3,
 		// shadowRadius: 2,
 	}
 }
+
+
 
 export default connect(mapStateToProps, { restaurantListFetch })(RestaurantsList);

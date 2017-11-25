@@ -11,11 +11,13 @@ class Welcome extends Component {
 
 	render() {
 		return (
-		<Image source={require('../img/food1.jpeg')} style={styles.pageBackground}>
-			<View>
-				<Text style={styles.headText}>Magic Menu</Text>
-			</View>
-			<View >
+			<Image source={require('../assets/img/landingBackground.png')} style={styles.pageBackground}>
+			{/* <View> */}
+				{/* <Text style={styles.headText}>Magic Menu</Text> */}
+			{/* </View> */}
+				<Image style={styles.owl} source={require('../assets/img/owl.png')} />
+				<Image style={styles.magicMenu} source={require('../assets/img/magicMenus.png')} />
+			<View style={styles.getStarted}>
 			{/* style={styles.exampleStyle} */}
 				<Button style={styles.mainButton} onPress={this.onButtonPress.bind(this)}>
 					<Text style={styles.buttonText}>Get Started</Text>
@@ -60,20 +62,27 @@ const styles = {
 		marginTop: -50
 	},
 	mainButton: {
-		flex: 1,
-		alignSelf: "stretch",
 		backgroundColor: "rgba(255,255,255,.9)",
 		borderWidth: 2,
 		borderRadius: 5,
 		borderColor: "red",
-		// marginLeft: 5,
-		// marginRight: 5,
-		height: 50
+		height: 14,
+		minWidth: 130
 	},
 	buttonText: {
 		color: 'white',
-		// fontWeight: '900',
-		// paddingBottom: 30
+
+	},
+	owl: {
+		marginBottom: 30
+	},
+	magicMenu: {
+
+	},
+	getStarted: {
+		flexDirection: 'row',		
+		// position: 'absolute',
+		// bottom: 30
 	}
 }
 

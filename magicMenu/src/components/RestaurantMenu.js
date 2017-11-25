@@ -10,37 +10,39 @@ import RestaurantMenuItem from './RestaurantMenuItem';
 let menuCategories = [
 	{
 	   text:'Appetizer',
-	   textColor:'white',
-	   backgroundColor:'#179fd2',
+	   textColor:'black',
+	   fontWeight: 900,
+	   fontFamily: 'Avenir',
+	   backgroundColor:'transparent',
 	   borderColor:'rgba(0,0,0,0)'
 	},
 	{
 	   text:'Salad',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'Entrée',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'Dessert',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'Beverage',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	},
 	{
 	   text:'À la carte',
-	   textColor:'black',
+	   textColor:'rgba(0,0,0,.5)',
 	   backgroundColor:'rgba(255,255,255,0)',
 	   borderColor:'rgba(255,255,255,0)'
 	}
@@ -69,8 +71,14 @@ class RestaurantMenu extends Component {
 	render() {
 		console.log("RestaurantMenu", this.props.items);
 		return(
-			<Image source={require('../img/food1.png')} style={styles.background}>
-				<ScrollView>{this.renderRow()}</ScrollView>
+			<Image source={require('../assets/img/food1.png')} style={styles.background}>
+				<View
+					style={{
+					borderBottomColor: 'black',
+					borderBottomWidth: 1,
+					}}
+				/>				
+				<ScrollView style={styles.menuItems}>{this.renderRow()}</ScrollView>
 				<View style={styles.menuCategories}>
 					<ScrollingButtonMenu 
 						style={styles.restaurantSelectionForm}
@@ -92,25 +100,39 @@ const styles = {
 		// alignItems: 'center',
 		width: null,
 		height: null,
-		backgroundColor: 'rgba(255,255,255,0)',
+		backgroundColor: 'rgba(255,255,255,1)',
 		// resizeMode: 'contain'
+	},
+	menuItems: {
+		marginTop: 60
 	},
 	restaurantSelectionForm: {
 		// flex: 1,
-		padding: 15,
-		paddingBottom: 30,
+		padding: 5,
+		// paddingBottom: 30,
 		borderWidth: 0,
+		
 		// marginLeft: 40
 		// alignItems: 'center',
 		// justifyContent: 'center'
 	},
 	menuCategories: {
-		backgroundColor:'rgba(255,255,255,0)',
-		height: 60,
-		// shadowColor: '#000',
-		// shadowOffset: { width: 0, height: 2 },
-		// shadowOpacity: 0.3,
-		// shadowRadius: 2,
+		backgroundColor:'rgba(255,255,255,1)',
+		height: 40,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.3,
+		shadowRadius: 2,
+		position: 'absolute',
+		bottom: 10,
+		borderRadius: 50,
+		marginLeft: 10,
+		marginRight: 10,
+		// flexDirection: 'row',
+		// justifyContent: 'space-between',
+		// alignItems: 'space-between'
+
+		// right: 10,
 	}
 }
 
