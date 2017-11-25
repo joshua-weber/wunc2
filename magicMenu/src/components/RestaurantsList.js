@@ -1,37 +1,9 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { ListView, Image, SegmentedControlIOS, View } from 'react-native';
-import ScrollingButtonMenu from 'react-native-scrolling-button-menu';
+import { ListView, Image, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { restaurantListFetch } from '../actions';
 import RestaurantListItem from './RestaurantListItem';
-
-let menus = [
-	{
-	   text:'Nearby',
-	   textColor:'white',
-	   backgroundColor:'#179fd2',
-	   borderColor:'rgba(0,0,0,0)'
-	},
-	{
-	   text:'Map',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'Favorites',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'Search',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	}
-];
 
 class RestaurantsList extends Component {
 
@@ -62,10 +34,6 @@ class RestaurantsList extends Component {
 		return <RestaurantListItem restaurant = {restaurant} />;
 	}
 
-	onPressButtonMenu(menu) {
-		console.log(menu.text);
-	  }
-
 	render() {
 		return (
 			<Image source={require('../assets/img/food1.png')} style={styles.background}>
@@ -73,15 +41,7 @@ class RestaurantsList extends Component {
 					enableEmptySections
 					dataSource = {this.dataSource}
 					renderRow = {this.renderRow}
-				/>
-				<View style={styles.menuCategories}>
-					<ScrollingButtonMenu 
-						style={styles.restaurantSelectionForm}
-						items={menus}
-						// style={{padding:15}}
-						onPress={this.onPressButtonMenu.bind(this)}
-					/>
-				</View>				
+				/>			
 			</Image>
 		);
 	}

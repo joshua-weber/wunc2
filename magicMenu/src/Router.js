@@ -4,6 +4,7 @@ import Welcome from './components/Welcome';
 import AR from './components/AR';
 import RestaurantsList from './components/RestaurantsList';
 import RestaurantMenu from './components/RestaurantMenu';
+import Main from './components/Main';
 
 const RouterComponent = () => {
 	return (
@@ -11,6 +12,7 @@ const RouterComponent = () => {
 			<Stack key="root" hideNavBar>
 				<Scene key="main">
 					<Scene key="welcome" component={Welcome} hideNavBar />
+					<Scene key="test" component={Main} />
 					<Scene key="restaurants" component={RestaurantsList} title="Restaurants" />
 					<Scene key="restaurantMenu" component={RestaurantMenu} title="Menu" />
 					<Scene key="ar" component={AR} title="AR Compnent" />

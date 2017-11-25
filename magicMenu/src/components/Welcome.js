@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
-import { DemoApp } from '../actions';
+import { Main } from '../actions';
 import { Button } from './common';
 
 class Welcome extends Component {
 
 	onButtonPress() {
-		DemoApp();
+		Main();
 	}
 
 	render() {
