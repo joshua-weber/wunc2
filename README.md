@@ -1,6 +1,20 @@
-# Project Title
+# Magic Menu
 
-One Paragraph of project description goes here
+Magic Menu is a React Native app built by WUNCS Inc as their final group project for the University of Utah's Coding Boot Camp. Magic Menu also uses the Viro Media's Viro React library to support all augmented reality functionality. 
+
+Magic Menu is a new mobile app that will replace traditional menus at restaurants and will display them on your smart phone. After going through a restaurant's menu users can select a particular food/drink item and have it displayed in augmented reality on their phones. Specific food/drink item information will be displayed along with the 3d model, such as: ingredients, ratings, ordering, order history, and how many times the item has been ordered that day.
+
+## Members
+
+Joshua Weber
+
+Alex Ulfich
+
+Thongvun Nak
+
+Derek Cassel
+
+Kundan Shah
 
 ## Getting Started
 
