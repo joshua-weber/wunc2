@@ -4,18 +4,6 @@ Magic Menu is a React Native app built by WUNCS Inc as their final group project
 
 Magic Menu is a new mobile app that will replace traditional menus at restaurants and will display them on your smart phone. After going through a restaurant's menu users can select a particular food/drink item and have it displayed in augmented reality on their phones. Specific food/drink item information will be displayed along with the 3d model, such as: ingredients, ratings, ordering, order history, and how many times the item has been ordered that day.
 
-## Members
-
-Joshua Weber
-
-Alex Ulfich
-
-Thongvun Nak
-
-Derek Cassel
-
-Kundan Shah
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -72,13 +60,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [React Native](https://facebook.github.io/react-native/) - Mobile platform
+* [ViroReact](https://viromedia.com/viroar) - Augmented Reality library
+* [Materialize](http://materializecss.com/) - CSS preprocessor
 
 ## Versioning
 
@@ -86,9 +70,15 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Joshua Weber** - *Initial idea, UI/UX Designer* - [joshua-weber](https://github.com/joshua-weber)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Alexander Ulfich** - *React Native programmer* - [alex-117](https://github.com/alex-117)
+
+* **Thongvun Nak** - *Initial work, React Native back up* - [lagrangepoint2](https://github.com/lagrangepoint2)
+
+* **Derek Cassel** - *Viro Developer* - [PurpleBooth](https://github.com/refindthetime)
+
+* **Kundan Shah** - *Web Developer* - [PurpleBooth](https://github.com/KKShah123)
 
 ## License
 
@@ -96,6 +86,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* The Univeristy of Utah (Jason Anderson, our teacher)
+* Our friends and family who put up with us while we turned crazy and got stressed out working on this project
