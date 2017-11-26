@@ -1,7 +1,8 @@
 import _ from 'lodash';
+import firebase from 'firebase';
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { Card, CardSection, ButtonE, ButtonD } from './common';
+import { Card, CardSection, ButtonE, ButtonD, ButtonF } from './common';
 import { AR } from '../actions';
 
 
@@ -10,6 +11,15 @@ class RestaurantMenuItem extends Component {
 	onButtonPress() {
 		console.log("onButtonPress", this);
 		AR(this);
+	}
+
+	onFavoritePress() {
+		console.log("onFavoritePress", this);
+		const favorites = firebase.database().ref().child(`/favorites`);
+		newFavorite = favorites.push();
+		newFavorite.set({
+			name: this.name
+		})
 	}
 	
 	render() {
@@ -30,6 +40,7 @@ class RestaurantMenuItem extends Component {
 					<ButtonE>order</ButtonE>
 					<ButtonD>info</ButtonD>
 					<ButtonD onPress={this.onButtonPress.bind(this.props.menuItem)}>AR</ButtonD>
+					<ButtonF onPress={this.onFavoritePress.bind(this.props.menuItem)}>heart</ButtonF>
 				</CardSection>
 
 			</Card>
