@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
-import { Main } from '../actions';
+import { RestaurantMain } from '../actions';
 import { Button } from './common';
 
 class Welcome extends Component {
 
 	onButtonPress() {
-		Main();
+		RestaurantMain();
 	}
 
 	render() {

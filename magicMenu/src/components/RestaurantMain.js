@@ -4,11 +4,10 @@ import RestaurantsList from './RestaurantsList';
 import Favorites from './Favorites';
 import Map from './Map';
 
-class TabsScrollableExample extends Component {
+class RestaurantMain extends Component {
   render() {
     return (
       <Container>
-        <Header hasTabs/>
         <Tabs renderTabBar={()=> <ScrollableTab />}>
           <Tab heading="List">
             <RestaurantsList />
@@ -25,4 +24,4 @@ class TabsScrollableExample extends Component {
   }
 }
 
-export default TabsScrollableExample;
+export default RestaurantMain;

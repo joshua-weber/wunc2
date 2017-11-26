@@ -5,14 +5,14 @@ export const DemoApp = () => {
 	Actions.restaurants();
 };
 
-export const Menu = (props) => {
-	Actions.restaurantMenu(props);
+export const MenuMain = (props) => {
+	Actions.menuMain(props);
 }
 
 export const AR = (props) => {
 	Actions.ar(props);
 }
 
-export const Main = () => {
-	Actions.test();
+export const RestaurantMain = () => {
+	Actions.restaurantMain();
 }

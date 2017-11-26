@@ -50,7 +50,7 @@ class RestaurantMenu extends Component {
 
 
 	renderRow() {
-		const data = this.props.items;
+		const data = this.props.menuItems;
 		const array = [];
 
 		for (let prop in data) {
@@ -65,19 +65,13 @@ class RestaurantMenu extends Component {
 	}
 
 	render() {
-		console.log("RestaurantMenu", this.props.items);
+		console.log("RestaurantMenu", this.props.menuItems);
 		return(
-			<Image source={require('../assets/img/food1.png')} style={styles.background}>
-				<ScrollView>{this.renderRow()}</ScrollView>
-				<View style={styles.menuCategories}>
-					<ScrollingButtonMenu 
-						style={styles.restaurantSelectionForm}
-						items={menuCategories}
-						// style={{padding:15}}
-						// onPress={this.onPressButtonMenu.bind(this)}
-					/>
-				</View>	
-			</Image>
+			<View style={{flex: 1}}>
+				<Image source={require('../assets/img/food1.png')} style={styles.background}>
+					<ScrollView>{this.renderRow()}</ScrollView>
+				</Image>
+			</View>
 
 		)
 	}

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Card, CardSection, ButtonE, ButtonC } from './common';
-import { Menu } from '../actions';
+import { MenuMain } from '../actions';
 
 class RestaurantListItem extends Component {
 	onButtonPress() {
-		Menu(this);
+		MenuMain(this);
 	}
 
 	render() {
