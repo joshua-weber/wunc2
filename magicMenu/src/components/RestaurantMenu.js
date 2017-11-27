@@ -3,53 +3,13 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { ScrollView, Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import RestaurantMenuItem from './RestaurantMenuItem';
+import RestaurantMenuItems from './RestaurantMenuItems';
 
-
-let menuCategories = [
-	{
-	   text:'Appetizer',
-	   textColor:'white',
-	   backgroundColor:'#179fd2',
-	   borderColor:'rgba(0,0,0,0)'
-	},
-	{
-	   text:'Salad',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'Entrée',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'Dessert',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'Beverage',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	},
-	{
-	   text:'À la carte',
-	   textColor:'black',
-	   backgroundColor:'rgba(255,255,255,0)',
-	   borderColor:'rgba(255,255,255,0)'
-	}
-];
-
-
-class RestaurantMenu extends Component {
+class TestMenu extends Component {
 
 
 	renderRow() {
+		console.log("RenderRowApp", this.props);
 		const data = this.props.menuItems;
 		const array = [];
 
@@ -57,22 +17,21 @@ class RestaurantMenu extends Component {
 			array.push(data[prop]);
 		}
 
-		return array.map(menuItem => (
-			<RestaurantMenuItem key={menuItem.name} menuItem={menuItem} />
+		return array.map(items => (
+			<RestaurantMenuItems items={items} />
 		))
 		
 
 	}
 
 	render() {
-		console.log("RestaurantMenu", this.props.menuItems);
+		console.log("Appetizer", this.props.menuAppetizer);
 		return(
 			<View style={{flex: 1}}>
 				<Image source={require('../assets/img/food1.png')} style={styles.background}>
 					<ScrollView>{this.renderRow()}</ScrollView>
 				</Image>
 			</View>
-
 		)
 	}
 
@@ -107,4 +66,4 @@ const styles = {
 	}
 }
 
-export default RestaurantMenu;
+export default TestMenu;

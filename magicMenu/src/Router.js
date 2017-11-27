@@ -3,7 +3,6 @@ import { Scene, Router, Stack, Actions } from 'react-native-router-flux';
 import Welcome from './components/Welcome';
 import AR from './components/AR';
 import RestaurantsList from './components/RestaurantsList';
-import RestaurantMenu from './components/RestaurantMenu';
 import RestaurantMain from './components/RestaurantMain';
 import MenuMain from './components/MenuMain';
 
@@ -15,8 +14,6 @@ const RouterComponent = () => {
 					<Scene key="welcome" component={Welcome} hideNavBar />
 					<Scene key="restaurantMain" component={RestaurantMain} title="Restaurants"/>
 					<Scene key="menuMain" component={MenuMain} title="Menu" />
-					<Scene key="restaurants" component={RestaurantsList} hideNavBar />
-					<Scene key="restaurantMenu" component={RestaurantMenu} hideNavBar />
 					<Scene key="ar" component={AR} title="AR Compnent" />
 				</Scene>
 

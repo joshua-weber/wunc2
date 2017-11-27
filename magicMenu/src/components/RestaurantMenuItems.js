@@ -6,7 +6,7 @@ import { Card, CardSection, ButtonE, ButtonD, ButtonF } from './common';
 import { AR } from '../actions';
 
 
-class RestaurantMenuItem extends Component {
+class RestaurantMenuItems extends Component {
 
 	onButtonPress() {
 		console.log("onButtonPress", this);
@@ -23,7 +23,8 @@ class RestaurantMenuItem extends Component {
 	}
 	
 	render() {
-		const { name, description } = this.props.menuItem;
+		console.log("THISPROPSAPPETIZER", this);
+		const { name, description } = this.props.items;
 		return (
 
 			<Card>
@@ -39,8 +40,8 @@ class RestaurantMenuItem extends Component {
 				<CardSection style={styles.menuButtonRow}>
 					<ButtonE>order</ButtonE>
 					<ButtonD>info</ButtonD>
-					<ButtonD onPress={this.onButtonPress.bind(this.props.menuItem)}>AR</ButtonD>
-					<ButtonF onPress={this.onFavoritePress.bind(this.props.menuItem)}>heart</ButtonF>
+					<ButtonD onPress={this.onButtonPress.bind(this.props.items)}>AR</ButtonD>
+					<ButtonF onPress={this.onFavoritePress.bind(this.props.items)}>heart</ButtonF>
 				</CardSection>
 
 			</Card>
@@ -84,4 +85,4 @@ const styles = {
 	}
 }
 
-export default RestaurantMenuItem;
+export default RestaurantMenuItems;

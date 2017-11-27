@@ -3,44 +3,54 @@ import { View, Text } from 'react-native';
 import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
 import RestaurantMenu from './RestaurantMenu';
 
+
 class MenuMain extends Component {
 
-  menuItems() {
-      return this.props.items;
-    }
+  menuAppetizer() {
+      return this.props.Appetizer;
+  }
+
+  menuEntree() {
+    return this.props.Entrée;
+  }
+
+  menuAlacarte() {
+    return this.props.Alacarte;
+  }
+
+  menuBeverages() {
+    return this.props.Beverages;
+  }
+
+  menuDessert() {
+    return this.props.Dessert;
+  }
+
+  menuSalad() {
+    return this.props.Salad;
+  }
 
   render() {
-    console.log("THISTHIS", this.props.items)
     return (
       <Container>
         <Tabs renderTabBar={()=> <ScrollableTab />}>
           <Tab heading="Appetizer">
-            <View>
-              <Text>No items at this time</Text>
-            </View>
+            <RestaurantMenu key={this.menuAppetizer().name} menuItems={this.menuAppetizer()} />
           </Tab>
           <Tab heading="Salad">
-            <View>
-              <Text>No items at this time</Text>
-            </View>
+            <RestaurantMenu key={this.menuSalad().name} menuItems={this.menuSalad()} />
           </Tab>
           <Tab heading="Entrée">
-            <RestaurantMenu menuItems={this.menuItems()}/>  
+            <RestaurantMenu key={this.menuEntree().name} menuItems={this.menuEntree()} />
           </Tab>
           <Tab heading="Dessert">
-            <View>
-              <Text>No items at this time</Text>
-            </View>
+            <RestaurantMenu key={this.menuDessert().name} menuItems={this.menuDessert()} />
           </Tab>
           <Tab heading="Beverages">
-            <View>
-              <Text>No items at this time</Text>
-            </View> 
+            <RestaurantMenu key={this.menuBeverages().name} menuItems={this.menuBeverages()} />
           </Tab>
           <Tab heading="À la carte">
-            <View>
-              <Text>No items at this time</Text>
-            </View>
+            <RestaurantMenu key={this.menuAlacarte().name} menuItems={this.menuAlacarte()} />
           </Tab>
         </Tabs>
       </Container>
