@@ -1,8 +1,11 @@
 import React from "react";
+import firebase from "firebase";
 import { Text, TouchableOpacity } from "react-native";
 
-const ButtonC = ({ onPress, children }) => {
+const ButtonF = ({ onPress, children }) => {
 	const { buttonStyle, textStyle } = styles;
+
+	console.log("BUTTONF", this)
 
 	return (
 		<TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
@@ -14,19 +17,23 @@ const ButtonC = ({ onPress, children }) => {
 const styles = {
 	textStyle: {
 		alignSelf: "center",
-		fontColor: "black",
+		color: "white",
 		fontSize: 14,
-		fontWeight: "500",
+		fontWeight: "900",
 		paddingTop: 10,
 		paddingBottom: 10,
-		fontFamily: 'Avenir'
+		fontFamily: 'Avenir',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	buttonStyle: {
-		alignSelf: "stretch",
+		backgroundColor: "#179fd2",
+		borderWidth: 2,
 		borderRadius: 40,
-		marginLeft: 5,
-		marginRight: 5,
+		borderColor: "#179fd2",
+		minHeight: 45,
+		minWidth: 45,
+		marginLeft: 10,
 	}
 };
 
-export {ButtonC};
+export {ButtonF};

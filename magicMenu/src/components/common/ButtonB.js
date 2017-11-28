@@ -22,18 +22,10 @@ const styles = {
 		fontFamily: 'Avenir'
 	},
 	buttonStyle: {
-		// flex: 1,
-		// alignSelf: "stretch",
-		// backgroundColor: "rgba(0,0,0,.3)",
-		// borderWidth: 1,
 		borderRadius: 40,
-		// borderColor: "rgba(0,0,0,.3)",
 		marginLeft: 5,
 		marginRight: 5,
-		// padding: 10
-		// width: 50
 	}
 };
-
 
 export {ButtonB};

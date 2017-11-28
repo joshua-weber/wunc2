@@ -30,47 +30,76 @@ var sharedProps = {
 }
 
 // Sets the default scene you want for AR and VR
-var InitialARScene;
+var InitialARScene = require('../../js/HelloWorldSceneAR');
 
+var UNSET = "UNSET";
 var AR_NAVIGATOR_TYPE = "AR";
 
 // This determines which type of experience to launch in, or UNSET, if the user should
 // be presented with a choice of AR or VR. By default, we offer the user a choice.
-var defaultNavigatorType = AR_NAVIGATOR_TYPE;
+var defaultNavigatorType = UNSET;
 
 export default class ViroSample extends Component {
-
   constructor() {
     super();
+
     this.state = {
       navigatorType : defaultNavigatorType,
       sharedProps : sharedProps
     }
+    this._getExperienceSelector = this._getExperienceSelector.bind(this);
     this._getARNavigator = this._getARNavigator.bind(this);
+    this._getExperienceButtonOnPress = this._getExperienceButtonOnPress.bind(this);
   }
 
   // Replace this function with the contents of _getVRNavigator() or _getARNavigator()
   // if you are building a specific type of experience.
   render() {
-      console.log("AR file", this)
+    if (this.state.navigatorType == UNSET) {
+      return this._getExperienceSelector();
+    } else if (this.state.navigatorType == AR_NAVIGATOR_TYPE) {
       return this._getARNavigator();
+    }
+  }
+
+  // Presents the user with a choice of an AR or VR experience
+  _getExperienceSelector() {
+    return (
+      <View style={localStyles.outer} >
+        <View style={localStyles.inner} >
+
+          <Text style={localStyles.titleText}>
+            Choose your desired experience:
+          </Text>
+
+          <TouchableHighlight style={localStyles.buttons}
+            onPress={this._getExperienceButtonOnPress(AR_NAVIGATOR_TYPE)}
+            underlayColor={'#68a0ff'} >
+
+            <Text style={localStyles.buttonText}>AR</Text>
+          </TouchableHighlight>
+
+        </View>
+      </View>
+    );
   }
 
   // Returns the ViroARSceneNavigator which will start the AR experience
   _getARNavigator() {
-    if(this.props.filepath === 'Chicken') {
-        InitialARScene = require('../../js/Chicken');
-    } else if(this.props.filepath === 'Pain') {
-        InitialARScene = require('../../js/Pain');
-    } else if(this.props.filepath === 'Pizza') {
-        InitialARScene = require('../../js/Pizza');
-    }
-
-
     return (
       <ViroARSceneNavigator {...this.state.sharedProps}
         initialScene={{scene: InitialARScene}} />
     );
+  }
+  
+  // This function returns an anonymous/lambda function to be used
+  // by the experience selector buttons
+  _getExperienceButtonOnPress(navigatorType) {
+    return () => {
+      this.setState({
+        navigatorType : navigatorType
+      })
+    }
   }
 }
 

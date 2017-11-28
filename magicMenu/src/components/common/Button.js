@@ -5,19 +5,15 @@ const Button = ({ onPress, children }) => {
 	const { buttonStyle, textStyle } = styles;
 
 	return (
-		<TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
-			<Text style={styles.textStyle}>{children}</Text>
+		<TouchableOpacity onPress={onPress} style={buttonStyle}>
+			<Text style={textStyle}>{children}</Text>
 		</TouchableOpacity>
 	);
 };
 
 const styles = {
 	textStyle: {
-		// flex: 1,
-		// alignSelf: "center",
-		// justifyContent: 'flex-end',
-		// alignContent: 'center',
-		color: "black",
+		color: "white",
 		fontSize: 18,
 		fontWeight: "800",
 		paddingTop: 8,
@@ -28,20 +24,13 @@ const styles = {
 		textAlign: 'center'
 	},
 	buttonStyle: {
-		// flex: 1,
-		// alignSelf: "stretch",
-		backgroundColor: "rgba(255,255,255,.2)",
+		backgroundColor: "rgba(255,255,255,.05)",
 		borderWidth: 1.5,
 		borderRadius: 40,
 		borderColor: "rgba(255,255,255,1)",
 		marginTop: 50,
-		// marginRight: 5,
-		// height: 45,
-		// minWidth: 45,
-		minWidth: 250,
-		// justifyContent: 'center',
-		// alignContent: 'center',
-		// textAlign: 'center'
+		minWidth: 150,
+
 	}
 };
 
