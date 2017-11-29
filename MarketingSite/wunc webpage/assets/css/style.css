@@ -4,6 +4,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    /* overflow: hidden; */
 }
 
 h1 {
@@ -26,6 +27,12 @@ h3 {
 
 p {
   color: black;
+  font-family: 'Nunito Sans', sans-serif;      
+}
+
+p a {
+  font-family: 'Nunito Sans', sans-serif;    
+  color: black;  
 }
 
 .navbar-fixed-top{
@@ -42,10 +49,12 @@ p {
 
 .navbar-nav {
   color: white;
-  margin-left: 240px;
+  /* margin-left: 240px; */
 }
 
-
+#navMenu {
+  margin-left: 240px;  
+}
 
 .navbar-center {
     position: absolute;
@@ -60,6 +69,41 @@ p {
                  0px 8px 13px rgba(0,0,0,0.1),
                  0px 18px 23px rgba(0,0,0,0.1);
 }
+
+/* .collapse, .navbar-collapse {
+  background: rgb(255, 255, 255);
+  width: 150px;
+  text-align: right;
+  position: absolute;
+  right: 80px;
+  border: 0px;
+  padding: 20px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  box-shadow: 0px 10px 35px #00000085;
+  top: 52px;
+
+}
+
+.collapse #navMenu, .navbar-collapse #navMenu {
+  margin: 0px;
+  text-align: center;
+}
+
+.collapse ul, .navbar-collapse ul {
+  margin: 0px;
+  text-align: center;
+}
+
+.navbar-default .collapse ul li a {
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+.navbar-default .collapse ul .signUp a {
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  /* border: 1px solid red; */
+} */
 
 /*hr {
     width: 400px;
@@ -89,19 +133,80 @@ p {
     background-size: cover;
     background-position: center; 
     height: 100%;
-    border-bottom: 6px solid rgb(255,255,255);
-    /* position: relative; */
-    /* top: -40px; */
+    border-bottom: 10px solid rgb(0, 0, 0);
+    position: relative;
+    top: -10px;
 }
 .display3{
     background: url('../images/UIcards.png');
     background-size: cover;
     background-position: center; 
     height: 100%;
+    border-bottom: 10px solid rgb(0, 0, 0);
     /* position: relative; */
     /* top: -206px; */
+}  
 
-}   
+.teamImages img {
+  height: 200px;
+  width: auto;
+}
+
+.teamImages {
+  max-width: 40%;
+  float: right;
+}
+
+.about {
+  width: 90%;
+  margin: 5% 5%;
+}
+
+.contactUs {
+  background: white;
+  padding: 5px 20px 20px;
+  /* max-width: 40%; */
+  margin: 0;
+  margin-top: 50px;
+  width: 50%;
+  display: inline-block;
+}
+
+.display3 h1 {
+  text-align: center;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: rgba(245, 245, 245, 0.85);
+  background-image: none;
+  border: 1px solid rgba(204, 204, 204, 0);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  /* border-bottom: 1px solid black; */
+  border-radius: 0px;
+}
+
+
+.form-control:focus {
+  border-color: #66b0e900;
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  border-radius: 0px;
+  outline: 0;
+  -webkit-box-shadow:  0 0px 10px rgba(0, 0, 0, 0.30);
+  box-shadow:  0 0px 10px rgba(0, 0, 0, 0.30);
+}
 
 #logo{
     /* position: relative; */
@@ -129,12 +234,40 @@ p {
     height: 59px;
 }
 
+.btn {
+  font-family: 'Nunito Sans', sans-serif;    
+  
+}
+
 .footer a {
   margin: 15px;
 }
 
 footer div a img {
     height: 29px;
+}
+
+.footer-links {
+  margin: 19px 0px 6px;
+}
+
+.footer-links a {
+  color: rgba(0, 0, 0, 0.685);
+  margin: 0px 8px;
+  font-weight: 600;
+}
+
+.footer-company-name {
+  /* margin: 10px; */
+  color: #707885;
+}
+
+.contactInfo {
+  margin: 10px 0px 30px;
+}
+
+.contactInfo div p {
+  margin: 0px;
 }
 
 .signUp {
@@ -162,6 +295,10 @@ footer div a img {
     margin-top: 70px;
 }
 
+.ctaButton a {
+    margin: 10px;
+}
+
 .ctaButton a img {
     border-radius: 30px;
     border: 1px solid white;
@@ -169,6 +306,11 @@ footer div a img {
 
 .ctaButton a img:hover {
     opacity: .8;
+}
+
+.ctaButton a .btn:hover {
+    background: white;
+    text-decoration: none;
 }
 
 .content .ctaButton a {
@@ -182,13 +324,20 @@ footer div a img {
 
 #leftRow {
   text-align: left;
+  margin-bottom: 30px;
 }
 
 .iphoneX {
   z-index: 1;
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: -170px;
+  left: 10vw;
+}
+
+
+.iphoneX img {
+  width: auto;
+  height: 80vh;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -198,19 +347,25 @@ footer div a img {
 
 .video {
   background: white;
-  width: 500px;
-  height: 300px;
+  width: 710px;
+  height: 460px;
   position: absolute;
-  right: -960px;
+  right: 70px;
   top: 180px;
-
 }
 
 .display1Content {
   text-align: left;
   position: absolute;
-  top: 240px;
-  left: 580px;
+  top: 30vh;
+  /* left: 54vw; */
+  width: 100%;
+}
+
+.headText {
+  left: 40vw;
+  position: absolute;
+  max-width: 58%;
 }
 
 .featureMain {
@@ -225,11 +380,126 @@ footer div a img {
   margin: 30px;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: rgba(221, 221, 221, 0);
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #ffffff38;
+  border-radius: 0px;
+}
 
 
-@media screen and (max-width: 991px) {
+
+@media screen and (max-width: 1270px) {
   #leftRow {
     text-align: center;
   }
+
+  .iphoneX img {
+    width: auto;
+    height: 80vh;
+  }
+  .iphoneX {
+    z-index: 1;
+    position: absolute;
+    top: -170px;
+    left: 7vw;
+  }
+  .headText {
+    left: 40vw;
+    position: absolute;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #leftRow {
+    text-align: center;
+  }
+
+  .iphoneX img {
+    width: auto;
+    height: 73vh;
+  }
+  .iphoneX {
+    z-index: 1;
+    position: absolute;
+    top: -170px;
+    left: 3vw;
+  }
+  .headText {
+    left: 40vw;
+    position: absolute;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #leftRow {
+    text-align: center;
+  }
+
+  .iphoneX img {
+    width: auto;
+    height: 73vh;
+  }
+  .iphoneX {
+    z-index: 1;
+    position: absolute;
+    top: -170px;
+    left: 1vw;
+  }
+  .headText {
+    left: 40vw;
+    position: absolute;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #leftRow {
+    text-align: center;
+  }
+
+  .iphoneX img {
+    width: auto;
+    height: 73vh;
+    position: absolute;
+    margin: 0px auto;
+  }
+  .iphoneX {
+    z-index: 1;
+    position: absolute;
+    top: 340px;
+    width: 100%;
+    /* left: 3vw; */
+  }
+  .headText {
+    left: auto;
+    position: relative;
+    /* width: 100%; */
+    /* display: block; */
+    top: -220px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .ctaButton {
+    margin-top: 20px;
+  }
+
+
 }
 
