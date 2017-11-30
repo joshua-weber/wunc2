@@ -8,7 +8,7 @@ Magic Menu is a new mobile app that will replace traditional menus at restaurant
 
 * [React Native](https://facebook.github.io/react-native/) - Mobile platform
 * [ViroReact](https://viromedia.com/viroar) - Augmented Reality library
-* [Materialize](http://materializecss.com/) - CSS preprocessor
+* [Bootstrap](https://getbootstrap.com/) - CSS preprocessor
 
 ## Authors
 
@@ -28,5 +28,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* The Univeristy of Utah (Jason Anderson, our teacher)
+* The Univeristy of Utah (Jason Anderson, our teacher, Josh Tilling + Deon Sharps, our TAs)
 * Our friends and family who put up with us while we turned crazy and got stressed out working on this project
