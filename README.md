@@ -16,7 +16,7 @@ Magic Menu is a new mobile app that will replace traditional menus at restaurant
 
 * **Alexander Ulfich** - *React Native programmer, Viro back up* - [alex-117](https://github.com/alex-117)
 
-* **Thongvun Nak** - *Initial work, React Native back up, CSS styling, team Mom* - [lagrangepoint2](https://github.com/lagrangepoint2)
+* **Thongvun Nak** - *Initial work, React Native back up, CSS styling, team mom* - [lagrangepoint2](https://github.com/lagrangepoint2)
 
 * **Derek Cassel** - *Viro Developer* - [refindthetime](https://github.com/refindthetime)
 
