@@ -131,14 +131,16 @@ p a {
   /* position: relative; */
   /* top: -50px; */
 }
-.display2{
-    /* background: url('../images/marketingimage.png'); */
-    /* background-size: cover; */
-    /* background-position: center;  */
-    /* height: 100%; */
-    border-bottom: 10px solid rgb(0, 0, 0);
-    position: relative;
-    /* top: -10px; */
+
+.display2 {
+  background: url(../images/marketingimage.png);
+  background-size: cover;
+  background-position: center;
+  /* height: 100%; */
+  border-bottom: 10px solid rgb(0, 0, 0);
+  position: relative;
+  top: -10px;
+  text-align: center;
 }
 
 .display3{
@@ -160,13 +162,51 @@ p a {
   background-color: #fff0;
   border: 1px solid transparent;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  /* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05); */
+  /* box-shadow: 0 1px 1px rgba(0,0,0,.05); */
 }
+
+.display2 .container .row .panel-body {
+  /* width: 423px; */
+}
+
+.display2 .container .row .panel {
+  margin: 50px;
+}
+
+.display2 .container .row .panel .panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f500;
+  border: 0px;
+  text-align: center;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+}
+
+.display2 .container {
+  /* padding: 100px; */
+}
+
+.display2 .container h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding-top: 90px;
+}
+
+
 
 .panel .panel-body img {
   height: 200px;
   width: auto; 
+}
+
+.display2 .container .row .panel .panel-body img {
+  height: 634px;
+  width: auto;
 }
 
 .panel-body {
@@ -181,6 +221,15 @@ p a {
   display: inline-block;
 }
 
+.display2 .container .row .panel-default {
+  border-color: #ddd0;
+  border-radius: 0px;
+  border: 0px;
+  width: auto;
+  display: inline-block;
+  box-shadow: none;
+}
+
 .panel-footer {
   padding: 10px 15px;
   background-color: #f5f5f500;
@@ -188,8 +237,8 @@ p a {
   text-align: center;
   color: white;
   font-family: 'Rubik', sans-serif;
-
-
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .teamImages {
@@ -242,7 +291,7 @@ p a {
   font-family: 'Rubik', sans-serif;
   font-size: 40px;
   font-weight: 400;
-  padding-top: 90px;
+  padding-top: 40px;
 }
 
 .currentUsers .container .row {
@@ -405,14 +454,25 @@ footer div a img {
 .iphoneX {
   z-index: 1;
   position: absolute;
-  top: -170px;
+  top: -180px;
   left: 10vw;
 }
 
 
 .iphoneX img {
   width: auto;
+  height: 84vh;
+  position: absolute;
+  z-index: 10001;
+  left: -24px;
+  top: -19px;
+}
+
+.iphoneX video {
+  width: auto;
   height: 80vh;
+  position: absolute;
+  
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -512,6 +572,10 @@ footer div a img {
     text-align: center;
   }
 
+  .iphoneX video {
+    height: 76vh;
+  }
+
   .iphoneX img {
     width: auto;
     height: 80vh;
@@ -534,6 +598,10 @@ footer div a img {
     text-align: center;
   }
 
+  .iphoneX video {
+    height: 70vh;
+  }
+
   .iphoneX img {
     width: auto;
     height: 73vh;
@@ -542,7 +610,7 @@ footer div a img {
     z-index: 1;
     position: absolute;
     top: -170px;
-    left: 3vw;
+    left: 6vw;
   }
   .headText {
     left: 40vw;
@@ -576,11 +644,17 @@ footer div a img {
     width: auto;
     height: 70vh;
   }
+
+  .iphoneX video {
+    height: 67vh;
+    top: -6px;
+    left: -6px;
+}
   .iphoneX {
     z-index: 1;
     position: absolute;
     top: -110px;
-    left: 1vw;
+    left: 5vw;
   }
   .headText {
     left: 40vw;
