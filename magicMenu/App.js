@@ -1,13 +1,21 @@
+// App.js - main control for entire application
+
+// import packages
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
+
+//import reducers
 import reducers from './src/reducers';
+
+// import component(s)
 import Router from './src/Router';
 
 class App extends Component {
 
+	// componentWillMount() is grabbing firebase api-key and database paths/information
 	componentWillMount() {
 		var config = {
 		    apiKey: "AIzaSyDjfG-HQZPaQ8CvN56-0c3QiOMZOGnnRbw",
@@ -20,6 +28,7 @@ class App extends Component {
 		firebase.initializeApp(config);
 	}
 
+	// Create a store to use redux in application
 	render() {
 		const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 

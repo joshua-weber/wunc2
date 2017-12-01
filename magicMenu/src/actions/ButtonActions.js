@@ -1,9 +1,11 @@
-import { Actions } from 'react-native-router-flux';
+/*
+ * ButtonActions.js
+ *
+ * handles button actions for routing
+ * able to pass props through from one scene to another
+ */
 
-//DemoApp no longer needed?
-export const DemoApp = () => {
-	Actions.restaurants();
-};
+import { Actions } from 'react-native-router-flux';
 
 export const MenuMain = (props) => {
 	Actions.menuMain(props);

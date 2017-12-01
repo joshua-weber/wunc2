@@ -9,7 +9,6 @@ class TestMenu extends Component {
 
 
 	renderRow() {
-		console.log("RenderRowApp", this.props);
 		const data = this.props.menuItems;
 		const array = [];
 
@@ -41,28 +40,18 @@ const styles = {
 	background: {
 		flex: 1,
 		// justifyContent: 'center',
-		// alignItems: 'center',
 		width: null,
 		height: null,
 		backgroundColor: 'rgba(255,255,255,0)',
-		// resizeMode: 'contain'
 	},
 	restaurantSelectionForm: {
-		// flex: 1,
 		padding: 15,
 		paddingBottom: 30,
 		borderWidth: 0,
-		// marginLeft: 40
-		// alignItems: 'center',
-		// justifyContent: 'center'
 	},
 	menuCategories: {
 		backgroundColor:'rgba(255,255,255,0)',
 		height: 60,
-		// shadowColor: '#000',
-		// shadowOffset: { width: 0, height: 2 },
-		// shadowOpacity: 0.3,
-		// shadowRadius: 2,
 	}
 }
 

@@ -1,15 +1,27 @@
+/*
+ * Map.js
+ *
+ * Uses Google API and react-native-maps to produce a Google map.
+ * Map can find user location if authorized to do so
+ *
+ * ++will eventually show nearby restaurants++
+ */
+
+// import packages
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 class Map extends Component {
 
+	// set initial map location (state) to null
 	state = {
 		mapRegion: null,
 		lastLat: null,
 		lastLong: null,
 	}
 
+	// locate user region
 	componentDidMount() {
      	this.watchID = navigator.geolocation.watchPosition((position) => {
 			let region = {
@@ -23,6 +35,8 @@ class Map extends Component {
     	});
   	}
 
+  	// pass user region, lat and long data to onRegionChange function
+  	// set state from null to new coordinates
 	onRegionChange(region, lastLat, lastLong) {
 		this.setState({
 			mapRegion: region,

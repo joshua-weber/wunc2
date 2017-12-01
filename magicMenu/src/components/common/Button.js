@@ -13,10 +13,6 @@ const Button = ({ onPress, children }) => {
 
 const styles = {
 	textStyle: {
-		// flex: 1,
-		// alignSelf: "center",
-		// justifyContent: 'flex-end',
-		// alignContent: 'center',
 		color: "black",
 		fontSize: 18,
 		fontWeight: "800",
@@ -28,20 +24,12 @@ const styles = {
 		textAlign: 'center'
 	},
 	buttonStyle: {
-		// flex: 1,
-		// alignSelf: "stretch",
 		backgroundColor: "rgba(255,255,255,.2)",
 		borderWidth: 2,
 		borderRadius: 45,
 		borderColor: "rgba(255,255,255,1)",
 		marginTop: 50,
-		// marginRight: 5,
-		// height: 45,
-		// minWidth: 45,
 		width: 150,
-		// justifyContent: 'center',
-		// alignContent: 'center',
-		// textAlign: 'center'
 	}
 };
 

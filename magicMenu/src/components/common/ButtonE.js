@@ -23,8 +23,6 @@ const styles = {
 		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	buttonStyle: {
-		// flex: 1,
-		// alignSelf: "stretch",
 		backgroundColor: "#179fd2",
 		borderWidth: 2,
 		borderRadius: 40,
@@ -32,9 +30,6 @@ const styles = {
 		minHeight: 45,
 		minWidth: 45,
 		marginLeft: 10,
-		// marginRight: 5,
-		// padding: 10
-		// width: 50
 	}
 };
 

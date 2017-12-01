@@ -22,12 +22,10 @@ var HelloWorldSceneAR = React.createClass({
   },
   render: function() {
     return (
-      <ViroARScene onTrackingInitialized={()=>{this.setState({text : "Pain!"})}}>
-        <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} />
+      <ViroARScene onTrackingInitialized={()=>{this.setState({text : " "})}}>
+        <ViroText text={this.state.text} scale={[.7, .7, .7]} position={[0, 0, -1]} />
 
-        <ViroAmbientLight
-          color="#ffffff"
-       />
+        <ViroAmbientLight color={"#ffffff"}/>
       <ViroARPlaneSelector minHeight={.1} minWidth={.1}>
          <Viro3DObject
     source={require("./res/pizza/WC_Pizza.obj")}
@@ -48,7 +46,7 @@ var HelloWorldSceneAR = React.createClass({
                     require('./res/pizza/WC_Wood_RM.jpg')]}
     highAccuracyGaze={true}
 position={[0, -0.1, 0]}
-    scale={[.01, .01, .01]}
+    scale={[.05, .05, .05]}
     rotation={[0, 0, 0]}
     materials={["wood", "pizza", "slice", "slice2"]}
     type="OBJ"/>

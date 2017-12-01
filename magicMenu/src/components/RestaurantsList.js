@@ -74,11 +74,12 @@ const styles = {
 		// padding: 100,
 		// width: '100%'
 		borderWidth: 0,
+		// marginTop: 60
 	},
 	restaurantSelectionForm: {
 		// flex: 1,
-		padding: 15,
-		paddingBottom: 30,
+		// padding: 5,
+		// paddingBottom: 30,
 		// shadowColor: '#000',
 		// shadowOffset: { width: 0, height: 2 },
 		// shadowOpacity: 0.5,

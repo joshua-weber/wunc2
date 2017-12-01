@@ -27,17 +27,15 @@ var HelloWorldSceneAR = React.createClass({
         <ViroAmbientLight
           color="#ffffff"
        />
-      <ViroARPlaneSelector minHeight={.1} minWidth={.1}>
+     
           <Viro3DObject
-          source={require('./res/Pain/Pain.vrx')}
-          resources={[require('./res/Pain/cgaxis_models_08_07_01.jpg')]}
-          position={[0, -0.1, -.1]}
-          rotation={[100, 20, -185]}
-          scale={[.1, .1, .1]}
-         
-          type="VRX" />
+            source={require('./res/banana/Banana.vrx')}
+            resources={[require('./res/banana/Banana.jpg')]}
+            position={[0, -0.2, 0]}
+            rotation={[-100, 75, 8]}
+            scale={[.001, .001, .001]}
+            type="VRX" />
 
-        </ViroARPlaneSelector>
     
 
       </ViroARScene>

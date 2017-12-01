@@ -11,70 +11,60 @@ class Welcome extends Component {
 
 	render() {
 		return (
-		<Image source={require('../assets/img/food1.jpeg')} style={styles.pageBackground}>
-			<View>
-				<Text style={styles.headText}>Magic Menu</Text>
-			</View>
-			<View >
-			{/* style={styles.exampleStyle} */}
-				<Button style={styles.mainButton} onPress={this.onButtonPress.bind(this)}>
-					<Text style={styles.buttonText}>Get Started</Text>
-				</Button>
-			</View>
-		</Image>
-	);	
-	}
-	
+			<Image source={require('../assets/img/landingBackground.png')} style={styles.pageBackground}>
+	        	<Image style={styles.owl} source={require('../assets/img/owl.png')} />
+	        	<Image style={styles.magicMenu} source={require('../assets/img/magicMenu1x.png')} />
+	        	<View style={styles.getStarted}>
+	          		<Button style={styles.mainButton} onPress={this.onButtonPress.bind(this)}>
+	            		<Text style={styles.buttonText}>Get Started</Text>
+	          		</Button>
+	        	</View>
+            <View style={styles.versionNumber}>
+                <Text style={{ color: '#fff' }}>
+                    V 0.1.3 - alpha
+                </Text>
+            </View>
+	        </Image>
+		);	
+	}	
 };
 
 const styles = {
-	//Styling goes here with the form of:
-	exampleStyle: {
-		// marginTop: 65,
-		// borderBottomWidth: 1,
-		// padding: 5,
-		// backgroundColor: "#99cc33",
-		// justifyContent: "flex-end",
-		// flexDirection: "row",
-		// borderColor: "rgba(0,0,0,0)",
-		// justifyContent: 'center'
-		// position: "relative",
-		// alignContent: "flex-end",
-		// marginLeft: 50,
-		// marginRight: 50,
-		// backgroundColor: 'rgba(255,255,255,.5)'
-	},
-	pageBackground: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: null,
-		height: null,
-		backgroundColor: 'rgba(0,0,0,0)'
-	},
-	headText: {
-		color: '#fff',
-		fontWeight: '900',
-		fontSize: 50,
-		fontFamily: 'Avenir',
-		marginTop: -50
-	},
-	mainButton: {
-		flex: 1,
-		alignSelf: "stretch",
-		backgroundColor: "rgba(255,255,255,.9)",
-		borderWidth: 2,
-		borderRadius: 5,
-		borderColor: "red",
-		// marginLeft: 5,
-		// marginRight: 5,
-		height: 50
-	},
-	buttonText: {
-		color: 'white',
-		// fontWeight: '900',
-		// paddingBottom: 30
-	}
+  pageBackground: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: null,
+    height: null,
+    backgroundColor: 'rgba(0,0,0,0)'
+  },
+  headText: {
+    color: '#fff',
+    fontWeight: '900',
+    fontSize: 50,
+    fontFamily: 'Avenir',
+    marginTop: -50
+  },
+  mainButton: {
+    backgroundColor: "rgba(255,255,255,.9)",
+    borderWidth: 2,
+    borderRadius: 5,
+    borderColor: "red",
+    height: 14,
+    minWidth: 130
+  },
+  buttonText: {
+    color: 'white',
+  },
+  owl: {
+    marginBottom: 30
+  },
+  getStarted: {
+    flexDirection: 'row',   
+  },
+  versionNumber: {
+    marginTop: 200
+  }
 }
 
 export default Welcome;

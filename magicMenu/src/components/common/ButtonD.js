@@ -19,11 +19,11 @@ const styles = {
 		fontWeight: "900",
 		paddingTop: 12,
 		paddingBottom: 10,
-		fontFamily: 'Avenir'
+		fontFamily: 'Avenir',
+		paddingLeft: 10,
+		paddingRight: 10,
 	},
 	buttonStyle: {
-		// flex: 1,
-		// alignSelf: "stretch",
 		backgroundColor: "rgba(0,0,0,0)",
 		borderWidth: 1,
 		borderRadius: 40,
@@ -31,9 +31,6 @@ const styles = {
 		minHeight: 45,
 		minWidth: 45,
 		marginLeft: 10,
-		// marginRight: 5,
-		// padding: 10
-		// width: 50
 	}
 };
 
