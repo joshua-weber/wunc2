@@ -1,0 +1,28 @@
+PODS:
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - ViroReact (1.0)
+  - Yoga (0.47.2.React)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - ViroReact (from `../node_modules/react-viro/ios/`)
+  - Yoga (from `../node_modules/react-native/ReactCommon/yoga/Yoga.podspec`)
+
+EXTERNAL SOURCES:
+  ViroReact:
+    :path: ../node_modules/react-viro/ios/
+  Yoga:
+    :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+
+SPEC CHECKSUMS:
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  ViroReact: 1458d6c6cb48bfc2d5a20ea1ab5cf426a71b17e2
+  Yoga: ff8531e8cf9f7ec92a75dd44286a68c4a084c507
+
+PODFILE CHECKSUM: af076600e45a2739754633100416bf755908169e
+
+COCOAPODS: 1.3.1
