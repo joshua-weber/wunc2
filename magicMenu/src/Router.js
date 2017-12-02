@@ -19,42 +19,46 @@ import MenuMain from './components/MenuMain';
 const RouterComponent = () => {
 	return (
 		<Router>
-			<Stack key="root">
-					<Scene 
-						key="welcome" 
-						component={Welcome}
-						hideNavBar={true} 
-						title="Welcome" 
-						initial={true}
-						backTitle={null}
-					/>
-					<Scene 
-						key="restaurantMain" 
-						component={RestaurantMain} 
-						title="Magic Menu" 
-						hideNavBar={false} 
-						backTitle={null}
-						navTransparent={false}
-						navBarButtonColor= 'black'
-						navigationBarStyle={{backgroundColor:'white', borderBottomWidth:1, shadowColor: 'rgba(0,0,0,1)', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 1, backButtonTintColor: 'black', }}	
-					/>
-					<Scene 
-						key="menuMain" 
-						component={MenuMain} 
-						title="Menu" 
-						backTitle={null}
-						navTransparent={false}
-						navBarButtonColor= 'black'
-						navigationBarStyle={{backgroundColor:'white', borderBottomWidth:1, shadowColor: 'rgba(0,0,0,1)', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 1, backButtonTintColor: 'black', }}	
-					/>
-					<Scene 
-						key="ar" 
-						component={AR} 
-						title="" 
-						navTransparent={true}
-						backTitle={null}
-						navBarButtonColor= 'black'
-					/>
+			<Stack key="root" hideNavBar>
+					<Scene key="auth">
+						<Scene 
+							key="welcome" 
+							component={Welcome}
+							hideNavBar={true} 
+							title="Welcome" 
+							backTitle={null}
+						/>
+					</Scene>
+
+					<Scene key="main">
+						<Scene 
+							key="restaurantMain" 
+							component={RestaurantMain} 
+							title="Magic Menu" 
+							hideNavBar={false} 
+							backTitle={null}
+							navTransparent={false}
+							navigationBarStyle={{backgroundColor:'white', borderBottomWidth:1, shadowColor: 'rgba(0,0,0,1)', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 1 }}	
+							initial
+						/>
+						<Scene 
+							key="menuMain" 
+							component={MenuMain} 
+							title="Menu" 
+							backTitle={null}
+							navTransparent={false}
+							navBarButtonColor= 'black'
+							navigationBarStyle={{backgroundColor:'white', borderBottomWidth:1, shadowColor: 'rgba(0,0,0,1)', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 1, backButtonTintColor: 'black', }}	
+						/>
+						<Scene 
+							key="ar" 
+							component={AR} 
+							title="" 
+							navTransparent={true}
+							backTitle={null}
+							navBarButtonColor= 'black'
+						/>
+					</Scene>
 			</Stack>
 		</Router>
 	)

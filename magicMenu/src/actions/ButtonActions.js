@@ -16,5 +16,5 @@ export const AR = (props) => {
 }
 
 export const RestaurantMain = () => {
-	Actions.restaurantMain();
+	Actions.main();
 }
